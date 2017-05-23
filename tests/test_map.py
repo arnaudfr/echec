@@ -19,8 +19,4 @@ class TestMap(unittest.TestCase):
     def test_tooSmallMap(self):
         game = Game()
         map = game.setGrid(3)
-        self.assertNotEqual(3, len(map))
-        for row in map:
-            self.assertEqual(5, len(row))
-            for cel in row:
-                self.assertEqual(0, cel)
+        self.assertEqual(0, map)
