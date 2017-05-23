@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from src.constant import *
 import unittest
 from src.game import Game
 
@@ -18,5 +19,11 @@ class TestMap(unittest.TestCase):
     # Too small grid
     def test_tooSmallMap(self):
         game = Game()
-        map = game.setGrid(3)
+        map = game.setGrid(MINGRID - 1)
+        self.assertEqual(0, map)
+
+    # Too big grid
+    def test_tooBigMap(self):
+        game = Game()
+        map = game.setGrid(MAXGRID + 1)
         self.assertEqual(0, map)
