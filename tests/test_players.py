@@ -38,4 +38,5 @@ class TestPlayers(unittest.TestCase):
         player = getPlayer(2)
         self.assertEqual(player._id, 2)
         player = getPlayer(5)
-        self.assertIsNone(player)
+        # self.assertIsNone(player)
+        self.assertRaises(ValueError)
