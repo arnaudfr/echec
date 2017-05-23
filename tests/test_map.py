@@ -14,3 +14,13 @@ class TestMap(unittest.TestCase):
             self.assertEqual(10, len(row))
             for cel in row:
                 self.assertEqual(0, cel)
+
+    # Too small grid
+    def test_tooSmallMap(self):
+        game = Game()
+        map = game.setGrid(3)
+        self.assertNotEqual(3, len(map))
+        for row in map:
+            self.assertEqual(5, len(row))
+            for cel in row:
+                self.assertEqual(0, cel)
