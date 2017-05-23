@@ -1,3 +1,5 @@
+from tkinter import *
+
 class UiMain:
     def __init__(self):
-        pass
+        self._window = Tk()
