@@ -25,7 +25,17 @@ class TestPlayers(unittest.TestCase):
         self.assertEqual(playerN._id, 1)
 
     # Get an invalid player
-    def test_unvalidPlayer(self):
+    def test_getUnvalidPlayer(self):
         game = Game()
         player = game.getPlayer(0)
+        self.assertIsNone(player)
+
+    # Set to many players
+    def test_tooManyPlayers(self):
+        game = Game()
+        for i in range(1,5):
+            game.createPlayer()
+        player = getPlayer(2)
+        self.assertEqual(player._id, 2)
+        player = getPlayer(5)
         self.assertIsNone(player)
