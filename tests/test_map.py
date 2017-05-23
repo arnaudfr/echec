@@ -27,3 +27,9 @@ class TestMap(unittest.TestCase):
         game = Game()
         map = game.setGrid(MAXGRID + 1)
         self.assertEqual(0, map)
+
+    # Negative grid
+    def test_negativeMap(self):
+        game = Game()
+        map = setGrid(-12)
+        self.assertEqual(0, map)
