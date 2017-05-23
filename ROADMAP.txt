@@ -1,0 +1,4 @@
+A partir de maintenant on fait les choses bien,
+On code chaque fonctionnalité dans sa branche dédiée avec ses tests correspondants et on ne merge sur master que des build passing !
+
+May the force be with us.
