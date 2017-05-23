@@ -7,6 +7,7 @@ class Game:
     def setGrid(self,size):
         if size > MINGRID and size < MAXGRID:
             self._grid = [[0 for x in range(size)] for y in range(size)]
+            self._players = []
             return self._grid
         else:
             return None
