@@ -4,7 +4,7 @@ class Game:
 
     # Function to set new grid based on size
     def setGrid(self,size):
-        if size > MINGRID:
+        if size > MINGRID and size < MAXGRID:
             self._grid = [[0 for x in range(size)] for y in range(size)]
             return self._grid
         else:
