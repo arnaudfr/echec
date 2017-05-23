@@ -35,7 +35,7 @@ class TestPlayers(unittest.TestCase):
         game = Game()
         for i in range(1,5):
             game.createPlayer()
-        player = getPlayer(2)
+        player = game.getPlayer(2)
         self.assertEqual(player._id, 2)
-        player = getPlayer(5)
+        player = game.getPlayer(5)
         self.assertIsNone(player)

@@ -14,5 +14,5 @@ class TestPlayer(unittest.TestCase):
 
     # Init invalid player
     def test_initInvalidPlayer(self):
-        player = Player(-12)
-        self.assertIsNone(player)
+        with self.assertRaises(ValueError):
+            player = Player(-12)
