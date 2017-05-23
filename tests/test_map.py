@@ -20,16 +20,16 @@ class TestMap(unittest.TestCase):
     def test_tooSmallMap(self):
         game = Game()
         map = game.setGrid(MINGRID - 1)
-        self.assertEqual(0, map)
+        self.assertIsNone(map)
 
     # Too big grid
     def test_tooBigMap(self):
         game = Game()
         map = game.setGrid(MAXGRID + 1)
-        self.assertEqual(0, map)
+        self.assertIsNone(map)
 
     # Negative grid
     def test_negativeMap(self):
         game = Game()
         map = game.setGrid(-12)
-        self.assertEqual(0, map)
+        self.assertIsNone(map)
