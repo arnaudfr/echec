@@ -31,5 +31,5 @@ class TestMap(unittest.TestCase):
     # Negative grid
     def test_negativeMap(self):
         game = Game()
-        map = setGrid(-12)
+        map = game.setGrid(-12)
         self.assertEqual(0, map)
