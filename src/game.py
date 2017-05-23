@@ -1,4 +1,5 @@
 from src.constant import *
+from src.player import Player
 
 class Game:
 
@@ -16,3 +17,10 @@ class Game:
             return 0
         else:
             return self._grid
+
+    def createPlayer(self):
+        self._players[len(self._players)] = Player(len(self._players))
+        return self._players[len(self._players)]
+
+    def getPlayer(self,i):
+        return self._players[i]
