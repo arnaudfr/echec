@@ -25,7 +25,7 @@ class Game:
         if len(self._players) >= 4:
             return None
         else:
-            self._players[len(self._players)] = Player(len(self._players))
+            self._players.append(Player(len(self._players)))
             return self._players[len(self._players)]
 
     def getPlayer(self,i):
