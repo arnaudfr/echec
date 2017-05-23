@@ -1,5 +1,8 @@
 class Player:
 
     def __init__ (self,id):
-        self._id = id
+        if (id < 0):
+            raise ValueError()
+        else:
+            self._id = id
         pass

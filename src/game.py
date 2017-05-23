@@ -26,10 +26,10 @@ class Game:
             return None
         else:
             self._players.append(Player(len(self._players)))
-            return self._players[len(self._players)]
+            return self._players[len(self._players)-1]
 
-    def getPlayer(self,i):
+    def getPlayer(self,id):
         if id >= len(self._players) or id < 0:
             return None
         else:
-            return self._players[i]
+            return self._players[id]
