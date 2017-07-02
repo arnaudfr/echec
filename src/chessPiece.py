@@ -2,7 +2,7 @@ from src.constant import *
 
 class ChessPiece:
 
-	def __init_(self,pattern,jump):
+	def __init__(self,pattern,jump):
 		self.jump = jump
 		if len(pattern) != 2:
 			return None
