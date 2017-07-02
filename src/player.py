@@ -9,6 +9,3 @@ class Player:
             self._id = id
         pass
 	self._pieces = []
-		
-	def createPiece():
-		

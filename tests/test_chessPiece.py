@@ -14,3 +14,8 @@ class TestChessPiece(unittest.TestCase):
         piece = ChessPiece([-1000, -1000000], False)
         self.assertRaises(excClass=ValueError)
         self.assertEqual(ValueError.message, 'negativePattern')
+
+    def test_CreateBadPattern(self):
+        piece = ChessPiece([2], True)
+        self.assertRaises(excClass=ValueError)
+        self.assertEqual(ValueError.message, 'badPattern')
