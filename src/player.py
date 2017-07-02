@@ -8,7 +8,7 @@ class Player:
         else:
             self._id = id
         pass
-	self._pieces = []
-		
-	def createPiece():
-		
+    self._pieces = []
+        
+    def createPiece():
+        
